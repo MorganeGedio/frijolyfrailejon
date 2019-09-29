@@ -1,56 +1,47 @@
-// As Morgane
-// I want to display the image in a modal
-// so i can enjoy a bigger quality
-
-// On image click open modal
-// store clicked image src
-// change modal image source
-// on close button click close modal
-
-// const imgTarget = document.getElementById('cinema');
-
+// get the modal 
 const modal = document.getElementById('modal');
-
+// get the modal image 
 const modalImg = document.getElementById('modalImg');
-
+// get the close button 
 const close = document.getElementById('close');
-
+// get the body (toggle scroll class)
 const body = document.body;
-
-// imgTarget.onclick = (clickEvent) => {
-//     modal.style.display = 'flex';
-//     modalImg.src = clickEvent.target.src;
-//     modalImg.alt = clickEvent.target.alt;
-//     body.classList.add("noScroll")
-// };
-
-// close modal
-// on click on "X"
-
-close.onclick = (clickEvent) => {
-    modal.style.display = 'none';
-    body.classList.remove("noScroll")
-};
-
-
-// on modal open, no scroll possible
-// on modal close, scroll available
-
-
-// i want all my pictures to open a modal on click 
-
+// get images based on class name 
 const imagesToOpen = document.getElementsByClassName('item');
 
+// for each image attach onclick event that open modal => action 
 for(let i = 0; i < imagesToOpen.length; i++) {
     imagesToOpen[i].onclick = (clickEvent) => {
-        modal.style.display = 'flex';
-        modalImg.src = clickEvent.target.src;
-        modalImg.alt = clickEvent.target.alt;
-        body.classList.add("noScroll")
+        // execute the function 
+       openModal(clickEvent);
     };
 }
 
+// function to open modal and add no scroll => what it's executed 
+// 1 : define the fuction and pass it the argument event 
+// 2 : make the modal visible by changing the display from none to flex
+// 3 : attribute new value to the source of the modal image and get the target (image being clicked) source 
+// 5 : add CSS class (noScroll) on the body 
+openModal = (event) => {
+    modal.style.display = 'flex';
+    modalImg.src = event.target.src;
+    modalImg.alt = event.target.alt;
+    body.classList.add("noScroll")
+};
 
+// attach onClick event to close button
+// call the function closeModal 
+close.onclick = () => {
+    closeModal();
+};
 
+// function to close modal 
+// 1 : define the function for closing modal 
+// 2 : make the modal invisible by changing display from flex to none
+// 3 : remove CSS class noScroll from body 
+closeModal = () => {
+    modal.style.display = 'none';
+    body.classList.remove("noScroll")
+};
 
 
