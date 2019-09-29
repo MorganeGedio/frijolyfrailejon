@@ -18,25 +18,6 @@ h2 {
 h3 {
 	font-size: 17px;	
 }
-.container {
-	display: flex;
-	flex-wrap: wrap;
-    justify-content: center;
-    padding: 5px;
-/*    align-content: space-around;
-*/
-	}
-
-.item:hover  {
-  opacity: 0.7;
-}
-
-.item {
-	width: 350px;
-	height: 350px;
-	margin: 15px;
-}
-
 
 p, figcaption {
 	text-align: center;
@@ -61,10 +42,64 @@ a:hover {
   color: #fbd1b7;
 }
 
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 5px;
+	/*    align-content: space-around;
+    */
+}
+
+.item {
+	width: 350px;
+	height: 350px;
+	margin: 15px;
+}
+
 footer {
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
+
+/*Modal element*/
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(160, 160, 160, 0.6);
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.item:hover{
+	cursor: pointer;
+}
+.modalImg {
+	height: 550px;
+	width: 550px;
+}
+
+.close {
+	color: black;
+	font-size: 24px;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+.noScroll {
+	overflow: hidden;
+}
+
+/*todo : rajouter un encadré + shadow*/
+
+
 
 /*Contact*/
 .contact{
