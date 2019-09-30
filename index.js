@@ -9,6 +9,10 @@ const body = document.body;
 // get images based on class name 
 const imagesToOpen = document.getElementsByClassName('item');
 
+// get figcaption 
+const captionText = document.getElementById("caption");
+
+
 // for each image attach onclick event that open modal => action 
 for(let i = 0; i < imagesToOpen.length; i++) {
     imagesToOpen[i].onclick = (clickEvent) => {
@@ -26,7 +30,8 @@ openModal = (event) => {
     modal.style.display = 'flex';
     modalImg.src = event.target.src;
     modalImg.alt = event.target.alt;
-    body.classList.add("noScroll")
+    body.classList.add("noScroll"); 
+    captionText.innerHTML = event.target.alt;
 };
 
 // attach onClick event to close button
@@ -45,3 +50,6 @@ closeModal = () => {
 };
 
 
+// todo : get the figcaption on click 
+// todo : create slide on modal 
+// todo : change close action > click on background + escape (implement backdrop click)
