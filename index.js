@@ -8,8 +8,7 @@ const close = document.getElementById('close');
 const body = document.body;
 // get images based on class name 
 const imagesToOpen = document.getElementsByClassName('item');
-
-// get figcaption 
+// get the modal figcaption 
 const captionText = document.getElementById("caption");
 
 
@@ -26,6 +25,7 @@ for(let i = 0; i < imagesToOpen.length; i++) {
 // 2 : make the modal visible by changing the display from none to flex
 // 3 : attribute new value to the source of the modal image and get the target (image being clicked) source 
 // 5 : add CSS class (noScroll) on the body 
+// 6 : make the alt attribute content as figcaption for modal 
 openModal = (event) => {
     modal.style.display = 'flex';
     modalImg.src = event.target.src;

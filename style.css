@@ -3,7 +3,7 @@ html * {
 
 }
 
-/*Index*/
+/*INDEX*/
 
 h1 {
 	text-align: center;
@@ -62,7 +62,7 @@ footer {
 	margin-bottom: 20px;
 }
 
-/*Modal element*/
+/*MODAL*/
 
 .modal {
 	display: none;
@@ -97,6 +97,17 @@ footer {
 	overflow: hidden;
 }
 
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 50px;
+    color: #fbd1b7;
+    letter-spacing: 5px;
+} 
+
 /*todo : rajouter un encadré + shadow on X to close 
 change max width on container
 media queries for mobile / tablet / desktop 
@@ -104,7 +115,9 @@ change width items*/
 
 
 
-/*Contact*/
+/* ABOUT PAGE  */
+
+/*CONTACT*/
 .contact{
 	text-align: left;
 }
@@ -113,7 +126,7 @@ li {
 	list-style-type: square;
 }
 
-/*Form*/
+/*FORM*/
 
 form {
 	margin: auto;
