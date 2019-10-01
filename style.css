@@ -1,6 +1,5 @@
 html * {
 	font-family: 'Special Elite', cursive;
-
 }
 
 /*INDEX*/
@@ -45,10 +44,12 @@ a:hover {
 .container {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	justify-content: center;
 	padding: 5px;
-	/*    align-content: space-around;
-    */
+	align-content: stretch;
+	/* max-width: 1300px;
+	margin: auto;	 */
 }
 
 .item {
@@ -91,6 +92,7 @@ footer {
 	position: absolute;
 	top: 25px;
 	right: 25px;
+	cursor: pointer;
 }
 
 .noScroll {

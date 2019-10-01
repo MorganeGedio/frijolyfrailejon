@@ -40,7 +40,7 @@ close.onclick = () => {
     closeModal();
 };
 
-// function to close modal 
+// function to close modal by clicking on "X"
 // 1 : define the function for closing modal 
 // 2 : make the modal invisible by changing display from flex to none
 // 3 : remove CSS class noScroll from body 
@@ -49,7 +49,12 @@ closeModal = () => {
     body.classList.remove("noScroll")
 };
 
+// function to close modal by clicking on background
+window.onclick = (event) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+}
 
-// todo : get the figcaption on click 
 // todo : create slide on modal 
-// todo : change close action > click on background + escape (implement backdrop click)
+// todo : change close action > click on escape
