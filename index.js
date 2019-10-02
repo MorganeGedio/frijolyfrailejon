@@ -39,7 +39,22 @@ close.onclick = () => {
     closeModal();
 };
 
-// function to close modal by clicking on "X"
+// close modal by clicking on background
+window.onclick = (event) => {
+    if (event.target == modal) {
+        closeModal();
+    }
+};
+
+// close modal by pressing EscKey 
+document.addEventListener('keydown', (event) => {
+    const escKey = event.key;
+    if (event.keyCode === 27) {
+        closeModal();
+    }
+}, false);
+
+// function to close modal 
 // 1 : define the function for closing modal 
 // 2 : make the modal invisible by changing display from flex to none
 // 3 : remove CSS class noScroll from body 
@@ -47,18 +62,3 @@ closeModal = () => {
     modal.style.display = 'none';
     body.classList.remove("noScroll")
 };
-
-// function to close modal by clicking on background
-window.onclick = (event) => {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-};
-
-// function to close modal by pressing EscKey 
-document.addEventListener('keydown', (event) => {
-    const escKey = event.key;
-    if (event.keyCode === 27) {
-        modal.style.display = "none";
-    }
-}, false);
