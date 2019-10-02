@@ -10,6 +10,8 @@ const body = document.body;
 const imagesToOpen = document.getElementsByClassName('item');
 // get the modal figcaption 
 const captionText = document.getElementById("caption");
+// get keyevent to leave modal
+const escKey = event.key;
 
 
 // for each image attach onclick event that open modal => action 
@@ -54,7 +56,11 @@ window.onclick = (event) => {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-}
+};
 
-// todo : create slide on modal 
-// todo : change close action > click on escape
+// function to close modal by pressing EscKey 
+document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 27) {
+        modal.style.display = "none";
+    }
+}, false);
