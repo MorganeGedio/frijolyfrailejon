@@ -1,0 +1,11 @@
+.contact{
+	text-align: left;
+}
+
+li {
+	list-style-type: square;
+}
+
+#coming-soon {
+    font-style: italic;
+}

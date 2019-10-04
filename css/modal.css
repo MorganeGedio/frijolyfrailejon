@@ -1,0 +1,44 @@
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(160, 160, 160, 0.6);
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.item:hover{
+	cursor: pointer;
+}
+.modalImg {
+	height: 550px;
+	width: 550px;
+}
+
+.close {
+	color: black;
+	font-size: 24px;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	cursor: pointer;
+}
+
+.noScroll {
+	overflow: hidden;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    /* left: 0;
+    right: 0; */
+    text-align: center;
+    padding: 50px;
+    color: #fbd1b7;
+    letter-spacing: 5px;
+} 

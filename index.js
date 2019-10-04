@@ -41,7 +41,7 @@ close.onclick = () => {
 
 // close modal by clicking on background
 window.onclick = (event) => {
-    if (event.target == modal) {
+    if (event.target === modal) {
         closeModal();
     }
 };
