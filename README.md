@@ -1,4 +1,4 @@
 # Frijolyfrailejon
 
 Pre-Bootcamp Project - Personal website
-Created to apply the prepwork knowledge
+created to apply the prepwork knowledge
